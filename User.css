@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(40, 9, 68);
+    color: rgb(184, 179, 171);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Button:hover{
+    background-color: aliceblue;
+    height: 43px;
+    width: 150px;
+}
+
+.Button{
+    border-radius: 20%;
+    border-style: groove;
+    width: 145px;
+    height: 40px;
+    font-size: x-large;
+    font-style: oblique;
+}
+
+.Connexion{
+    padding: 8px 16px;
+}
