@@ -20,7 +20,7 @@ body {
     width: 100%;
     max-width: 300px;
     flex-grow: 1;
-    border-radius: 8px;
+    border-radius: 20px;
     place-content: left;
     border: 1px solid #140620;
     background-color: #1b0730;
