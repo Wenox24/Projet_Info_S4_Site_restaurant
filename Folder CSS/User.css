@@ -6,19 +6,21 @@ body {
 }
 .Bungee{
     font-family: Bungee;
+    font-size: 100%;
+    color: #F67D00;
 }
 .margin{
     margin-left: -30px;
 }
 .img-resize {
-    width: 250px;
+    width: 90%;
     height: auto;
 }
 .rect-left {
     grid-column: 1;
     grid-row: 2 / 4;
     width: 100%;
-    max-width: 300px;
+    max-width:100%;
     flex-grow: 1;
     border-radius: 20px;
     place-content: left;
