@@ -3,7 +3,22 @@ body {
     color: rgb(184, 179, 171);
 }
 
+.rect-left {
+    grid-column: 1;
+    grid-row: 2 / 4;
+    width: 100%;
+    max-width: 250px;
+    flex-grow: 1;
+    border-radius: 8px;
+    place-content: left;
+    border: 1px solid #140620;
+    background-color: #1b0730;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
 header {
+    grid-area: header;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,20 +26,47 @@ header {
 
 .Button:hover{
     background-color: aliceblue;
-    height: 43px;
-    width: 150px;
+    animation: Zoom 0.3s ease-in-out forwards;
+    
 }
 
+aside {
+    grid-area: right-top;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+body>main {
+    display: grid;
+	grid-template-areas:
+		"left-aside header right-top"
+		"left-aside section right-aside"
+		"left-aside footer footer";
+	grid-template-rows: 120px auto 50px;
+	grid-template-columns: clamp(200px, 22%, 290px) auto 200px;
+}
 .Button{
-    border-radius: 20%;
+    margin-top: -60%;
+    border-radius: 10px;
     border-style: groove;
-    width: 145px;
+    width: 80%;
     height: 40px;
     font-size: x-large;
     font-style: oblique;
-    justify-content: left
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.Connexion{
-    padding: 8px 16px;
+@keyframes Zoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+    
 }
