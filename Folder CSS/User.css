@@ -3,11 +3,18 @@ body {
     color: rgb(184, 179, 171);
 }
 
+.margin{
+    margin-left: -30px;
+}
+.img-resize {
+    width: 200px;
+    height: auto;
+}
 .rect-left {
     grid-column: 1;
     grid-row: 2 / 4;
     width: 100%;
-    max-width: 250px;
+    max-width: 300px;
     flex-grow: 1;
     border-radius: 8px;
     place-content: left;
