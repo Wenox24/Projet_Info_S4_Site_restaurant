@@ -26,7 +26,7 @@ body>main {
     display: grid;
 	grid-template-areas:
 		"left-aside header right-top"
-		"left-aside section right-aside"
+		"left-aside section section"
 		"left-aside footer footer";
 	grid-template-rows: 120px auto 50px;
 	grid-template-columns: clamp(200px, 22%, 290px) auto 200px;
@@ -35,6 +35,10 @@ body>main {
 /* Incontournable */
 
 .rect-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
     grid-column: 1;
     grid-row: 2 / 4;
     width: 100%;
@@ -42,10 +46,54 @@ body>main {
     flex-grow: 1;
     border-radius: 20px;
     place-content: left;
-    border: 1px solid #140620;
+    border: 2px solid rgba(246, 125, 0, 0.4);
     background-color: #1b0730;
     padding: 15px;
     box-sizing: border-box;
+}
+
+.item-incontournable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.nom-sandwich {
+    font-family: 'Bungee';
+    color: #F67D00;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+/* Menu */
+
+.rect-middle img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.police_menus {
+    font-size: 200%;
+}
+u {
+    text-underline-offset: 4px;
+    text-decoration-color:#F67D00;
+}
+
+.rect-middle {
+    justify-self: end;
+    grid-area: section;
+    width: 75%;
+    min-height: 450px;
+    box-sizing: border-box;
+    border: 2px solid rgba(246, 125, 0, 0.4);
+    background-color: #1b0730;
+    padding: 20px;
+    border-radius: 20px;
+    margin-left: 15px;
+}
+.menus {
+    text-align: center;
 }
 
 /* Bouton*/
