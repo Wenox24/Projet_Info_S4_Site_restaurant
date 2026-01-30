@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Rufina:wght@400;700&display=swap');
 
 body {
     background-color: rgb(40, 9, 68);
@@ -9,13 +9,29 @@ body {
     font-size: 100%;
     color: #F67D00;
 }
-.margin{
-    margin-left: -30px;
-}
 .img-resize {
     width: 90%;
     height: auto;
 }
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body>main {
+    display: grid;
+	grid-template-areas:
+		"left-aside header right-top"
+		"left-aside section right-aside"
+		"left-aside footer footer";
+	grid-template-rows: 120px auto 50px;
+	grid-template-columns: clamp(200px, 22%, 290px) auto 200px;
+}
+
+
 .rect-left {
     grid-column: 1;
     grid-row: 2 / 4;
@@ -29,16 +45,10 @@ body {
     padding: 15px;
     box-sizing: border-box;
 }
-
-header {
-    grid-area: header;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* Bouton*/
 
 .Button:hover{
-    background-color: aliceblue;
+    background-color: #1b072d;
     animation: Zoom 0.3s ease-in-out forwards;
     
 }
@@ -51,35 +61,59 @@ aside {
     padding: 20px;
 }
 
-body>main {
-    display: grid;
-	grid-template-areas:
-		"left-aside header right-top"
-		"left-aside section right-aside"
-		"left-aside footer footer";
-	grid-template-rows: 120px auto 50px;
-	grid-template-columns: clamp(200px, 22%, 290px) auto 200px;
-}
 .Button{
+    font-family: Rufina ;
     margin-top: -60%;
-    border-radius: 10px;
+    border-radius: 20px;
     border-style: groove;
-    width: 80%;
+    width: 85%;
     height: 40px;
-    font-size: x-large;
+    font-size: 20px;
     font-style: oblique;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+.style_Button{
+    background-color: #1b072d;
+    color: aliceblue;
+    
+}
 @keyframes Zoom {
     from {
         transform: scale(1);
     }
     to {
         transform: scale(1.1);
+    }
+    
+}
+/*Fin Bouton*/
+
+@media screen and (max-width: 900px) {
+    body>main {
+        display: grid;
+        grid-template-areas: 
+        "header right-top"
+        "left aside"
+        "left aside"
+        "footer";
+        grid-template-columns: 50%;
+        grid-template-rows: 70px auto auto 70px;
+    }
+
+    header {
+        grid-area: header;
+        display: flex;
+        justify-content: left;
+        align-items: left;
+    }
+
+    aside {
+        display: flex;
+        gap: 10px;
+        padding: 10px;
     }
     
 }
