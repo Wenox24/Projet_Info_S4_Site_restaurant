@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Rufina:wght@400;700&display=swap');
 
+
 body {
     background-color: rgb(40, 9, 68);
     color: rgb(184, 179, 171);
@@ -31,6 +32,7 @@ body>main {
 	grid-template-columns: clamp(200px, 22%, 290px) auto 200px;
 }
 
+/* Incontournable */
 
 .rect-left {
     grid-column: 1;
@@ -45,6 +47,7 @@ body>main {
     padding: 15px;
     box-sizing: border-box;
 }
+
 /* Bouton*/
 
 .Button:hover{
@@ -91,6 +94,8 @@ aside {
 }
 /*Fin Bouton*/
 
+
+/* Dimension telephone*/
 @media screen and (max-width: 900px) {
     body>main {
         display: grid;
