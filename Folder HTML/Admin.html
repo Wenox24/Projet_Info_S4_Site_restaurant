@@ -8,24 +8,27 @@
 </head>
 <body>
     <header><img src="../Folder CSS/129.png" alt="Logo.png"  width="200"></header>
+    <input type="text" id="research">
     <table border="1">
         <caption> Admin View : </caption>
         <tr>
             <th> Id </th>
             <th> Nom utilisateur </th>
             <th>  Derniere date de connexion :</th>
-            <th>Supprimer</th>
+            <th class="col_Sup">
+                Supprimer <br>
+                <button id="select_all"> Tout sélectionner </button>
+            </th>
         </tr>
         <tr>
             <td> 15964</td>
             <td> abc@gmail.com </td>
             <td> 16/07/2025</td>
-            <td> <input type="checkbox" name="Supprimer" id="sup"> </td>
+            <td class="col_Sup"> <input type="checkbox" name="Supprimer" id="sup"> </td>
         </tr>
     
     </table>
-    <button> Tout sélectionner</button>
-    <button> Valider </button>
+    <button class="Submit"> Valider </button>
     
 </body>
 </html>
