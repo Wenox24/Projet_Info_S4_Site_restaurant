@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Rufina:wght@400;700&display=swap');
 
+:root {
+  --violet-nuit: #280944;   /* fond principal */
+  --ivoire-chaud: #F5EFE6;  /* cartes / blocs */
+  --aubergine: #2B153F;     /* textes foncés */
+  --doré-doux: #C9A24D;     /* accents */
+  --rose-poudré: #E6D6EB;   /* hover / douceur */
+}
+
 
 body {
     background-color: rgb(40, 9, 68);
@@ -101,6 +109,8 @@ u {
 .Button:hover{
     background-color: #1b072d;
     animation: Zoom 0.3s ease-in-out forwards;
+    background-color: var(--doré-doux);
+  color: var(--aubergine);
     
 }
 

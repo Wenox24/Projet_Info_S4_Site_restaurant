@@ -1,0 +1,121 @@
+:root {
+  --violet-nuit: #280944;   /* fond principal */
+  --ivoire-chaud: #F5EFE6;  /* cartes / blocs */
+  --aubergine: #2B153F;     /* textes foncés */
+  --doré-doux: #C9A24D;     /* accents */
+  --rose-poudré: #E6D6EB;   /* hover / douceur */
+}
+
+
+
+body {
+    background-color: var(--violet-nuit);
+    color: var(--ivoire-chaud);
+    margin: 0;
+    font-family: Georgia, serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+
+.avis-form {
+  display: flex;
+  justify-content: center;
+  margin: 80px 20px;
+}
+
+.avis-form h2 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #6b4b84;
+  margin-bottom: 32px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  font-size: 14px;
+  color: #2B153F;
+}
+
+textarea,
+input {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #C9A24D;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+
+textarea:focus,
+input:focus {
+  outline: none;
+  border-color: #B88ACF;
+}
+
+.card {
+    background-color: var(--ivoire-chaud);
+    color: var(--aubergine);
+    border-radius: 24px;
+    padding: 32px;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.btn {
+    background-color: var(--aubergine);
+    color: var(--ivoire-chaud);
+    border: none;
+    padding: 14px 32px;
+    border-radius: 999px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--doré-doux);
+  color: var(--aubergine);
+}
+
+.rect_mid {
+    width: 300px;
+    height: 200px;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: #F5EFE6;
+    border: 2px solid #C9A24D;
+    color: #2B153F;
+    border-radius: 20px;
+
+    border-radius: 20px;
+    gap: 21px;
+    box-sizing: border-box;
+}
