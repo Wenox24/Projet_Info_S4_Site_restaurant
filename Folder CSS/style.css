@@ -1,7 +1,6 @@
 :root {
     --bg-color: #121212;
     --card-bg: #202020;
-    --accent-color: #f4c542; /* Couleur jaune Epic pour le bouton */
 }
 
 
@@ -16,8 +15,8 @@ body {
 }
 
 .input-group {
-    margin-bottom: 15px; /* Espace entre les deux blocs */
-    text-align: left;    /* Aligne le texte à gauche */
+    margin-bottom: 15px; 
+    text-align: left;    
 }
 
 
@@ -26,7 +25,7 @@ body {
     font-size: 12px;
     font-weight: bold;
     color: #ffffff;
-    margin-bottom: 5px;  /* Petit espace avant la case */
+    margin-bottom: 5px;  
 }
 
 .login-card {
@@ -39,7 +38,7 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-/* Style pour ton image */
+
 .logo-box {
     margin-bottom: 10px;
 }
@@ -87,24 +86,24 @@ input:focus {
 .main-btn {
     width: 100%;
     padding: 16px;
-    background-color: #410a69; /* Le violet du logo */
-    color: white;              /* Texte en blanc pour le contraste */
+    background-color: #410a69;
+    color: white;             
     border: none;
     font-weight: bold;
     border-radius: 4px;
     cursor: pointer;
     text-transform: uppercase;
-    transition: background 0.3s; /* Petit effet de transition fluide */
+    transition: background 0.4s;
 }
 
-/* Pour le champ date qui peut être blanc par défaut */
+
 input[type="date"] {
     color-scheme: dark; /* Rend le calendrier sombre comme ton thème */
 }
 
-/* Petit effet quand on passe la souris sur le bouton */
+
 .main-btn:hover {
-    background-color: #8a2be2; /* Un violet un peu plus clair au survol */
+    background-color: #8a2be2;
 }
 
 .toggle-text {
@@ -119,28 +118,14 @@ input[type="date"] {
     text-decoration: none;
 }
 
-/* Style pour la boîte de sélection du genre (Homme/Femme) */
-.gender-box {
-    display: flex;
-    gap: 20px;
-    margin-top: 10px;
-    padding: 10px 0;
-}
 
-.gender-box label {
-    display: flex;
-    align-items: center;
-    gap: 8px; /* Espace entre le rond à cocher et le mot */
-    cursor: pointer;
-    font-size: 14px;
-    color: white;
-}
 
-/* Style pour le champ Date de naissance */
+
+
 input[type="date"] {
     appearance: none;
     -webkit-appearance: none;
-    color-scheme: dark; /* Force le calendrier à être sombre */
+    color-scheme: dark; 
 }
 
 /* On s'assure que tous les inputs ont le même look */
@@ -150,7 +135,7 @@ input[type="email"],
 input[type="password"] {
     width: 100%;
     padding: 12px;
-    background-color: #333; /* Gris foncé comme Epic Games */
+    background-color: #333;
     border: 1px solid #444;
     border-radius: 4px;
     color: white;
@@ -159,8 +144,8 @@ input[type="password"] {
 
 .form-title {
     font-size: 24px;
-    font-weight: 800; /* Très gras */
-    letter-spacing: 1px; /* Espace un peu les lettres */
+    font-weight: 800;
+    letter-spacing: 1px;
     color: #ffffff;
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -168,7 +153,7 @@ input[type="password"] {
 
 .subtitle {
     font-size: 14px;
-    color: #aaaaaa; /* Gris clair */
+    color: #aaaaaa;
     margin-bottom: 25px;
     line-height: 1.4;
 }
