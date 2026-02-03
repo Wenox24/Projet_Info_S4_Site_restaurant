@@ -13,12 +13,19 @@ header {
     align-items: center;
     padding: 20px;
     background-color: #1b0730;
-    border-bottom: 2px solid hsl(30, 100%, 48%);
+    border-bottom: 2px solid #F67D00;
 }
 
-.Bungee {
+.Bungee_orders {
     font-family: 'Bungee', cursive;
-    color: #F67D00;
+    color: #ff8c1a;
+    margin: 10px 0;
+}
+
+
+.Bungee_deliveries{
+    font-family: 'Bungee', cursive;
+    color: #22B35A;
     margin: 10px 0;
 }
 
@@ -30,20 +37,29 @@ header {
 }
 
 
-.board {
+.board_orders {
     flex: 1;
     background-color: #1b0730;
     border-radius: 15px;
     padding: 15px;
-    border: 1px solid #F67D00;
+    border: 1px solid #ff8c1a;
+    min-height: 400px;
+}
+
+.board_deliveries {
+    flex: 1;
+    background-color: #1b0730;
+    border-radius: 15px;
+    padding: 15px;
+    border: 1px solid #22B35A;
     min-height: 400px;
 }
 
 
-.card {
+.card_orders {
     background-color: #280944;
     border: 1px solid #140620;
-    border-left: 6px solid #F67D00;
+    border-left: 6px solid #ff8c1a;
     border-radius: 8px;
     margin-bottom: 15px;
     padding: 15px;
@@ -52,14 +68,47 @@ header {
     gap: 10px;
 }
 
-.order-id {
+.card_deliveries {
+    background-color: #280944;
+    border: 1px solid #140620;
+    border-left: 6px solid #22B35A;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.order-id_orders {
     font-weight: bold;
-    color: #F67D00;
+    color: #ff8c1a;
+}
+
+.order-id_deliveries {
+    font-weight: bold;
+    color: #22B35A;
+}
+
+.order-id_time{
+    font-weight: bold;
+    color: #FFFFFF;
 }
 
 
-.btn-action {
-    background-color: #F67D00;
+.btn-action_orders {
+    background-color: #ff8c1a;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Rufina';
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.btn-action_deliveries {
+    background-color: #22B35A;
     color: white;
     border: none;
     padding: 10px;
