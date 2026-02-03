@@ -1,5 +1,5 @@
 :root {
-    --bg-color: #121212;
+    --bg-color: hsl(272, 77%, 15%);
     --card-bg: #202020;
     --accent-color: #f4c542; 
 }
@@ -128,18 +128,6 @@ input[type="date"] {
 }
 
 
-input[type="text"], 
-input[type="date"], 
-input[type="email"], 
-input[type="password"] {
-    width: 100%;
-    padding: 12px;
-    background-color: #333; 
-    border: 1px solid #444;
-    border-radius: 4px;
-    color: white;
-    margin-top: 5px;
-}
 
 .form-title {
     font-size: 24px;
@@ -182,4 +170,31 @@ input[type="password"] {
 .login-wrapper {
     animation: fadeIn 0.6s ease-out;
 }
+
+
+@media (max-width: 480px) {
+    .login-card {
+        width: 90%;          
+        padding: 20px;       
+        border-radius: 10px; 
+    }
+
+    .site-logo {
+        width: 200px;        
+    }
+
+    h2, .form-title {
+        font-size: 20px;     
+    }
+
+    .main-btn {
+        padding: 12px;      
+    }
+}
+
+
+
+
+
+
 

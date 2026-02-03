@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Rufina:wght@400;700&display=swap');
 
 :root {
-  --violet-nuit: #280944;   /* fond principal */
+  --violet-nuit: hsl(272, 77%, 15%);   /* fond principal */
   --ivoire-chaud: #F5EFE6;  /* cartes / blocs */
   --aubergine: #2B153F;     /* textes foncés */
   --doré-doux: #C9A24D;     /* accents */

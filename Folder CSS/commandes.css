@@ -13,7 +13,7 @@ header {
     align-items: center;
     padding: 20px;
     background-color: #1b0730;
-    border-bottom: 2px solid #F67D00;
+    border-bottom: 2px solid hsl(30, 100%, 48%);
 }
 
 .Bungee {
