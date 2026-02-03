@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Rufina:wght@400;700&display=swap');
+
+body {
+    background-color: rgb(40, 9, 68); 
+    color: rgb(184, 179, 171);
+    margin: 0;
+    font-family: 'Rufina', serif;
+    font-size: 18px; 
+}
+
+header {
+    text-align: center;
+    padding: 15px;
+    background-color: #1b0730;
+    border-bottom: 3px solid #F67D00;
+}
+
+.Bungee {
+    font-family: 'Bungee', cursive;
+    color: #F67D00;
+    font-size: 1.2rem;
+}
+
+.container-mobile {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery-card {
+    background-color: #1b0730;
+    border: 2px solid #F67D00;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.info-groupe p {
+    margin: 15px 0;
+    line-height: 1.4;
+}
+
+
+.btn-maps {
+    display: block;
+    background-color: #280944;
+    color: #F67D00;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #F67D00;
+    border-radius: 15px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+
+.btn-final {
+    width: 100%;
+    min-height: 80px; 
+    background-color: #F67D00;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Bungee';
+    font-size: 1.4rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.btn-final:active {
+    transform: scale(0.95);
+}
