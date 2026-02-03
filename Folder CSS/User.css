@@ -43,6 +43,7 @@ body>main {
 /* Incontournable */
 
 .rect-left {
+    grid-area: left-aside;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -88,7 +89,7 @@ u {
     text-decoration-color:#F67D00;
 }
 
-.rect-middle {
+.rect-section {
     justify-self: end;
     grid-area: section;
     width: 75%;
@@ -158,25 +159,45 @@ aside {
     body>main {
         display: grid;
         grid-template-areas: 
-        "header right-top"
-        "left aside"
-        "left aside"
-        "footer";
-        grid-template-columns: 50%;
-        grid-template-rows: 70px auto auto 70px;
+            "header"
+            "right-top"
+            "left-aside"
+            "section"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px auto auto auto 70px;
     }
 
     header {
-        grid-area: header;
-        display: flex;
-        justify-content: left;
-        align-items: left;
+        justify-content: center;
     }
 
     aside {
         display: flex;
+        flex-direction: row;
+        justify-content: center;
         gap: 10px;
         padding: 10px;
     }
-    
+
+    .Button {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .rect-left {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .rect-section {
+        width: 100%;
+        justify-self: stretch;
+        margin-left: 0;
+    }
+
+    .rect-section img {
+        width: 100%;
+        height: auto;
+    }
 }
