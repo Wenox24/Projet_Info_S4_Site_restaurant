@@ -109,13 +109,8 @@ u {
 
 /* Bouton*/
 
-.Button:hover{
-    background-color: #1b072d;
-    animation: Zoom 0.3s ease-in-out forwards;
-    background-color: var(--doré-doux);
-  color: var(--aubergine);
-    
-}
+
+
 
 aside {
     grid-area: right-top;
@@ -125,33 +120,52 @@ aside {
     padding: 20px;
 }
 
-.Button{
-    font-family: Rufina ;
-    margin-top: -60%;
-    border-radius: 20px;
-    border-style: groove;
-    width: 85%;
-    height: 40px;
-    font-size: 20px;
-    font-style: oblique;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.Btn {
+  width: 140px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #6b2d8f, #8b3daf, #ff6b35, #ff8c42, #ffa500);
+  background-size: 250%;
+  background-position: left;
+  color: #ffd700;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255, 107, 53, 0.5);
 }
-.style_Button{
-    background-color: #1b072d;
-    color: aliceblue;
-    
+
+.Btn::before {
+  position: absolute;
+  content: "CONNEXION";
+  color: #ffd277;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  height: 90%;
+  border-radius: 8px;
+  transition-duration: 1s;
+  background-color: rgba(0, 0, 0, 0.842);
+  background-size: 200%;
 }
-@keyframes Zoom {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.1);
-    }
-    
+
+.Btn:hover {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn:hover::before {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn:active {
+  transform: scale(0.95);
 }
 /*Fin Bouton*/
 
