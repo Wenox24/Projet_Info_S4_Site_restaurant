@@ -14,6 +14,7 @@
         <tr>
             <th> Id </th>
             <th> Nom utilisateur </th>
+             <th> Statut :</th>
             <th>  Derniere date de connexion :</th>
             <th class="col_Sup">
                 Supprimer <br>
@@ -23,6 +24,15 @@
         <tr>
             <td> 15964</td>
             <td> abc@gmail.com </td>
+            <td>  <label for="type"> </label>
+                <select name="Perm" id="Permission">
+                    <option value="Default"> - </option>
+                    <option value="User"> Client </option>
+                    <option value="Livreur"> Livreur </option>
+                    <option value="Restaurateur"> Restaurateur </option>
+                    <option value="Admin"> Admin </option>
+                </select>
+            </td>
             <td> 16/07/2025</td>
             <td class="col_Sup"> <input type="checkbox" name="Supprimer" id="sup"> </td>
         </tr>
