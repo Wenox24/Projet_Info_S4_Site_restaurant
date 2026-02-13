@@ -1,0 +1,90 @@
+
+
+body {
+    background-color: rgb(40, 9, 68);
+    color: rgb(184, 179, 171);
+}
+
+.Bungee{
+    font-family: Bungee;
+    font-size: 100%;
+    color: #F67D00;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.rect-menus {
+    grid-area: section;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.menu-item {
+    background-color: #1b0730;
+     border: 2px solid rgba(246, 125, 0, 0.4);
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-info {
+    flex: 1;
+}
+
+.menu-title {
+    font-family: 'Bungee';
+    font-size: 1rem;
+    color: #F67D00;
+    margin: 0 0 5px 0;
+}
+
+.menu-price {
+    font-size: 0.9rem;
+    color: #ffd700;
+    margin: 5px 0;
+}
+
+.menu-description {
+    font-size: 1rem;
+    color: #b8b3ab;
+    line-height: 1.8;
+}
+
+.menu-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+}
+
+.add-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+
+    background-color: #F67D00;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.add-button:hover {
+    background-color: #ffa500;
+    transform: scale(1.1);
+}

@@ -19,6 +19,7 @@ body {
     font-size: 100%;
     color: #F67D00;
 }
+
 .img-resize {
     width: 90%;
     height: auto;
@@ -42,7 +43,7 @@ body>main {
 }
 
 
-/* Panier  à ajouter */ 
+
 
 /* Incontournable */
 
@@ -67,6 +68,7 @@ body>main {
 
 .item-incontournable {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -78,13 +80,14 @@ body>main {
     font-size: 1rem;
     margin-top: 5px;
 }
+
 /* Menu */
 
 .rect-menus {
     grid-area: section;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 4fr);
+    gap: 80px;
     padding: 20px;
 }
 
@@ -100,10 +103,17 @@ body>main {
 
 .menu-info {
     flex: 1;
+    text-align: center;
+    
+}
+.menu-info img{
+    height: 300px;
+    width: auto;
 }
 
 .menu-title {
     font-family: 'Bungee';
+    text-align: center;
     font-size: 1rem;
     color: #F67D00;
     margin: 0 0 5px 0;
@@ -245,8 +255,9 @@ aside {
     }
 
     .rect-left {
+        margin-top: 60px;
         width: 100%;
-        max-width: 100%;
+        max-width: 97%;
     }
 
     .rect-section {
