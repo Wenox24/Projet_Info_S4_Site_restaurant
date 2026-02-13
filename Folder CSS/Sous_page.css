@@ -1,8 +1,19 @@
 
 
+
 body {
     background-color: rgb(40, 9, 68);
     color: rgb(184, 179, 171);
+}
+
+body>main {
+    display: grid;
+	grid-template-areas:
+		"header right-top"
+		"section section"
+		"footer footer";
+	grid-template-rows: 120px auto 50px;
+	grid-template-columns: 1fr auto;
 }
 
 .Bungee{
@@ -18,6 +29,7 @@ header {
     align-items: center;
 }
 
+/* Menus */
 
 .rect-menus {
     grid-area: section;
@@ -88,3 +100,65 @@ header {
     background-color: #ffa500;
     transform: scale(1.1);
 }
+/* Fin texte menus */
+
+/* Bouton*/
+
+
+aside {
+    grid-area: right-top;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.Btn {
+  width: 140px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #6b2d8f, #8b3daf, #ff6b35, #ff8c42, #ffa500);
+  background-size: 250%;
+  background-position: left;
+  color: #ffd700;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255, 107, 53, 0.5);
+}
+
+.Btn::before {
+  position: absolute;
+  content: "CONNEXION";
+  color: #ffd277;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  height: 90%;
+  border-radius: 8px;
+  transition-duration: 1s;
+  background-color: rgba(0, 0, 0, 0.842);
+  background-size: 200%;
+}
+
+.Btn:hover {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn:hover::before {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn:active {
+  transform: scale(0.95);
+}
+
+/*Fin Bouton*/

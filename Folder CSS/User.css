@@ -168,7 +168,6 @@ body>main {
 aside {
     grid-area: right-top;
     display: flex;
-    flex-direction: column;
     gap: 10px;
     padding: 20px;
 }
