@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Rufina:wght@400;700&display=swap');
+
+:root {
+  --violet-nuit: hsl(272, 77%, 15%);
+  --ivoire-chaud: #F5EFE6;
+  --aubergine: #2B153F;
+  --doré-doux: #C9A24D;
+  --rose-poudré: #E6D6EB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(40, 9, 68);
+    color: rgb(184, 179, 171);
+    font-family: 'Rufina', serif;
+    line-height: 1.6;
+}
+
+.Bungee {
+    font-family: 'Bungee', cursive;
+    font-size: 1.2rem;
+    color: #F67D00;
+    margin-bottom: 15px;
+}
+
+.img-resize {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.img-resize:hover {
+    transform: scale(1.05);
+}
+
+/* HEADER */
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* LAYOUT PRINCIPAL */
+body > main {
+    display: grid;
+    grid-template-areas:
+        "header header right-top"
+        "left-aside section section"
+        "left-aside footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(200px, 280px) 1fr auto;
+    gap: 20px;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* SECTION INCONTOURNABLES - Améliorée */
+.rect-left {
+    grid-area: left-aside;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid rgba(246, 125, 0, 0.4);
+    background-color: #1b0730;
+    box-shadow: 0 4px 15px rgba(246, 125, 0, 0.2);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.item-incontournable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    background-color: rgba(246, 125, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.item-incontournable:hover {
+    background-color: rgba(246, 125, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(246, 125, 0, 0.3);
+}
+
+.nom-sandwich {
+    font-family: 'Bungee', cursive;
+    color: #F67D00;
+    font-size: 0.95rem;
+    margin-top: 5px;
+}
+
+/* SECTION MENUS - Améliorée */
+.rect-menus {
+    grid-area: section;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 10px;
+}
+
+.menu-item {
+    background-color: #1b0730;
+    border: 2px solid rgba(246, 125, 0, 0.4);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    min-height: 350px;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(246, 125, 0, 0.4);
+    border-color: #F67D00;
+}
+
+.menu-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.menu-info a {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.menu-info a:hover {
+    transform: scale(1.08);
+}
+
+.menu-info img {
+    max-height: 240px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.menu-title {
+    font-family: 'Bungee', cursive;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #F67D00;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.menu-price {
+    font-size: 1rem;
+    color: #ffd700;
+    margin: 5px 0;
+}
+
+.menu-description {
+    font-size: 0.95rem;
+    color: #b8b3ab;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* BOUTON CONNEXION - Amélioré */
+aside {
+    grid-area: right-top;
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.Btn {
+    width: 150px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #6b2d8f, #8b3daf, #ff6b35, #ff8c42, #ffa500);
+    background-size: 250%;
+    background-position: left;
+    color: #ffd700;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255, 107, 53, 0.5);
+}
+
+.Btn::before {
+    position: absolute;
+    content: "CONNEXION";
+    color: #ffd277;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 97%;
+    height: 90%;
+    border-radius: 8px;
+    transition: all 0.4s ease;
+    background-color: rgba(0, 0, 0, 0.842);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.Btn:hover {
+    background-position: right;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(255, 107, 53, 0.7);
+}
+
+.Btn:hover::before {
+    background-position: right;
+}
+
+.Btn:active {
+    transform: scale(0.95);
+}
+
+/* RESPONSIVE DESIGN - Amélioré */
+
+/* Tablettes */
+@media screen and (max-width: 1024px) {
+    body > main {
+        grid-template-columns: minmax(180px, 220px) 1fr;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .rect-menus {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+    }
+
+    .menu-info img {
+        max-height: 200px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    body > main {
+        display: grid;
+        grid-template-areas: 
+            "header"
+            "right-top"
+            "left-aside"
+            "section"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto 1fr auto;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    header {
+        justify-content: center;
+        padding: 15px 0;
+    }
+
+    header img {
+        max-width: 180px;
+    }
+
+    aside {
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .Btn {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .rect-left {
+        position: static;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .rect-menus {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .menu-item {
+        min-height: 300px;
+    }
+
+    .menu-info img {
+        max-height: 220px;
+    }
+
+    .menu-title {
+        font-size: 1.2rem;
+    }
+
+    .Bungee {
+        font-size: 1.1rem;
+    }
+}
+
+/* Très petits écrans */
+@media screen and (max-width: 480px) {
+    body > main {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .rect-left {
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .item-incontournable {
+        padding: 12px;
+    }
+
+    .img-resize {
+        max-width: 150px;
+    }
+
+    .menu-item {
+        padding: 15px;
+        min-height: 280px;
+    }
+
+    .menu-info img {
+        max-height: 180px;
+    }
+
+    .menu-title {
+        font-size: 1.1rem;
+    }
+
+    .nom-sandwich {
+        font-size: 0.85rem;
+    }
+}
+
+/* Amélioration de l'accessibilité */
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+a:focus,
+button:focus {
+    outline: 2px solid #F67D00;
+    outline-offset: 2px;
+}
+
+/* Scroll smooth */
+html {
+    scroll-behavior: smooth;
+}
