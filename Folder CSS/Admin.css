@@ -1,80 +1,454 @@
-body {
-    background-color: black;
-    color: beige;
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    color: #e5e5e5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ===== HEADER ===== */
 header {
     display: flex;
     justify-content: center;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-bottom: 2px solid rgba(16, 151, 16, 0.3);
+}
+
+header img {
+    max-width: 200px;
+    filter: drop-shadow(0 4px 8px rgba(16, 151, 16, 0.3));
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.05);
+}
+
+/* ===== CONTAINER ===== */
+.admin-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ===== ACTIONS EN-TÊTE ===== */
+.table-actions {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, rgba(16, 151, 16, 0.1) 0%, rgba(16, 151, 16, 0.05) 100%);
+    border-radius: 10px;
+    border: 1px solid rgba(16, 151, 16, 0.3);
+}
+
+.action-left {
+    display: flex;
+    gap: 15px;
+}
+
+.action-right {
+    color: rgb(16, 151, 16);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* ===== BOUTON SUPPRIMER ===== */
+.delete-btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: 2px solid #831010;
+    background: linear-gradient(135deg, #ae1616 0%, #8b0000 100%);
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(174, 22, 22, 0.3);
+}
+
+.delete-btn:hover {
+    background: linear-gradient(135deg, #cc0000 0%, #ae1616 100%);
+    border-color: #cc0000;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(204, 0, 0, 0.5);
+}
+
+.delete-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(174, 22, 22, 0.4);
+}
+
+/* ===== TABLEAU ===== */
+.table-wrapper {
+    overflow-x: auto;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: rgb(16, 151, 16);
+}
+
+caption {
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #20ff20;
+    text-align: left;
+    background: linear-gradient(to right, rgba(16, 151, 16, 0.2), transparent);
+    border-bottom: 2px solid rgb(16, 151, 16);
+}
+
+thead {
+    background: linear-gradient(135deg, rgba(16, 151, 16, 0.2) 0%, rgba(16, 151, 16, 0.1) 100%);
+}
+
+th {
+    padding: 18px 15px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid rgb(16, 151, 16);
+}
+
+th.col-checkbox {
+    width: 80px;
+    text-align: center;
 }
 
 td {
-    text-align: center;
-    vertical-align: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(16, 151, 16, 0.2);
+    transition: all 0.3s ease;
 }
 
-select {
-    background-color: black;
-    color: rgb(16, 151, 16) ;
-    border-radius: 5px;
+td.col-checkbox {
+    text-align: center;
+}
+
+/* Effet hover sur les lignes */
+tbody tr {
+    transition: all 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: rgba(16, 151, 16, 0.08);
+    transform: scale(1.01);
+}
+
+tbody tr:hover td {
+    color: #20ff20;
+}
+
+/* ===== CHECKBOX STYLISÉE (CSS pur) ===== */
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 2px solid rgba(16, 151, 16, 0.5);
+    border-radius: 6px;
     cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    background-color: transparent;
 }
 
-
-
-input[type="text"]{
-    /* Border*/
-    border-radius: 20px;
+input[type="checkbox"] + label:hover {
     border-color: rgb(16, 151, 16);
-    /* End Border */
-    height: 15px;
-    width: 60%;
-    max-width: 500px;
-    text-align: center;
-    display: block;
-    margin: 0 auto;
-    background-color: black;
+    background-color: rgba(16, 151, 16, 0.1);
+    transform: scale(1.1);
+}
+
+input[type="checkbox"]:checked + label {
+    background-color: rgb(16, 151, 16);
+    border-color: rgb(16, 151, 16);
+}
+
+/* Checkmark avec CSS pur */
+input[type="checkbox"]:checked + label::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
-    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-input[type="checkbox"]{
-    transform: scale(1.5);
-}
-
-/* Button */
-button {
-    background-color: black;
+/* ===== SELECT DROPDOWN ===== */
+.select-status {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
     color: rgb(16, 151, 16);
+    border: 2px solid rgba(16, 151, 16, 0.5);
     border-radius: 8px;
-    border-color: rgb(16, 151, 16);
-    font-size: 130%;
-}
-button:hover {
-    border-color: blue;
-    color: blue;
+    padding: 10px 14px;
     cursor: pointer;
+    font-size: 0.95rem;
+    min-width: 150px;
+    transition: all 0.3s ease;
+    outline: none;
 }
 
-.Submit{
-    margin: auto 80% ;
-    margin-top: 6px;
-    padding: 6px 8px;
+.select-status:hover {
+    border-color: rgb(16, 151, 16);
+    background: linear-gradient(135deg, rgba(16, 151, 16, 0.15) 0%, #1a1a1a 100%);
+    box-shadow: 0 0 10px rgba(16, 151, 16, 0.3);
 }
-.col_Sup {
-    text-align: center;
-}
-#select_all{
-    margin-top: 6px;
-    padding: 6px 8px;
-}
-/* End Button */
 
-table {
-    width: 90%;
-    margin: auto;
-    color: rgb(16, 151, 16);
-    border-color: rgb(16, 151, 16) ;
+.select-status:focus {
+    border-color: #20ff20;
+    box-shadow: 0 0 15px rgba(16, 151, 16, 0.5);
+    transform: scale(1.02);
+}
+
+/* ===== BADGE DATE ===== */
+.date-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 15px;
+    background-color: rgba(16, 151, 16, 0.2);
+    color: #20ff20;
+    border: 1px solid rgba(16, 151, 16, 0.5);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+tbody tr:hover .date-badge {
+    background-color: rgba(16, 151, 16, 0.3);
+    border-color: rgb(16, 151, 16);
+    box-shadow: 0 0 10px rgba(16, 151, 16, 0.3);
+}
+
+/* ===== BOUTONS D'ACTION BAS ===== */
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    padding: 25px;
+    background: linear-gradient(135deg, rgba(16, 151, 16, 0.05) 0%, transparent 100%);
     border-radius: 10px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 14px 35px;
+    border-radius: 10px;
+    border: 2px solid;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ===== BOUTON VALIDER (principal) ===== */
+.btn-primary {
+    background: linear-gradient(135deg, rgb(16, 151, 16) 0%, #0d8f0d 100%);
+    border-color: rgb(16, 151, 16);
+    color: white;
+    box-shadow: 0 4px 15px rgba(16, 151, 16, 0.3);
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #20ff20 0%, rgb(16, 151, 16) 100%);
+    border-color: #20ff20;
+    color: black;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(16, 151, 16, 0.5);
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 151, 16, 0.4);
+}
+
+/* ===== BOUTON ANNULER (secondaire) ===== */
+.btn-secondary {
+    background: transparent;
+    border-color: #666;
+    color: #e5e5e5;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
+    border-color: #999;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 102, 102, 0.3);
+}
+
+.btn-secondary:active {
+    transform: translateY(-1px);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+tbody tr {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animation décalée pour chaque ligne */
+tbody tr:nth-child(1) { animation-delay: 0.1s; }
+tbody tr:nth-child(2) { animation-delay: 0.2s; }
+tbody tr:nth-child(3) { animation-delay: 0.3s; }
+tbody tr:nth-child(4) { animation-delay: 0.4s; }
+tbody tr:nth-child(5) { animation-delay: 0.5s; }
+
+/* ===== SCROLLBAR PERSONNALISÉE ===== */
+.table-wrapper::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+    background: #0a0a0a;
+    border-radius: 10px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, rgb(16, 151, 16) 0%, #0d8f0d 100%);
+    border-radius: 10px;
+    border: 2px solid #0a0a0a;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #20ff20 0%, rgb(16, 151, 16) 100%);
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 1024px) {
+    .table-wrapper {
+        overflow-x: scroll;
+    }
+    
+    table {
+        min-width: 900px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        margin-bottom: 20px;
+    }
+
+    header img {
+        max-width: 150px;
+    }
+
+    caption {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    .table-actions {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .action-left {
+        width: 100%;
+    }
+
+    .delete-btn {
+        width: 100%;
+    }
+
+    .action-buttons {
+        flex-direction: column-reverse;
+        padding: 15px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        padding: 14px 20px;
+    }
+
+    th, td {
+        padding: 12px 8px;
+        font-size: 0.9rem;
+    }
+
+    .select-status {
+        min-width: 120px;
+        font-size: 0.85rem;
+        padding: 8px 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    th, td {
+        padding: 10px 5px;
+        font-size: 0.85rem;
+    }
+
+    .select-status {
+        min-width: 100px;
+        font-size: 0.8rem;
+    }
+
+    input[type="checkbox"] + label {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* ===== EFFET FOCUS POUR ACCESSIBILITÉ ===== */
+button:focus,
+select:focus,
+input:focus {
+    outline: 3px solid rgba(16, 151, 16, 0.5);
+    outline-offset: 2px;
 }
